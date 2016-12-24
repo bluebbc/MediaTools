@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TSPrint", "TSPrint\TSPrint.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "demux_h264_aac_use_ffmpeg", "demux_h264_aac_use_ffmpeg\demux_h264_aac_use_ffmpeg.vcxproj", "{81463C67-55E1-4F90-9F6A-9C4E1C1AAC5E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "demux_h264_aac_from_flv", "demux_h264_aac_from_flv\demux_h264_aac_from_flv.vcxproj", "{E5E6DDA8-22A7-4E56-873D-40D56C11EAD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -27,6 +29,10 @@ Global
 		{81463C67-55E1-4F90-9F6A-9C4E1C1AAC5E}.Debug|Win32.Build.0 = Debug|Win32
 		{81463C67-55E1-4F90-9F6A-9C4E1C1AAC5E}.Release|Win32.ActiveCfg = Release|Win32
 		{81463C67-55E1-4F90-9F6A-9C4E1C1AAC5E}.Release|Win32.Build.0 = Release|Win32
+		{E5E6DDA8-22A7-4E56-873D-40D56C11EAD2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E5E6DDA8-22A7-4E56-873D-40D56C11EAD2}.Debug|Win32.Build.0 = Debug|Win32
+		{E5E6DDA8-22A7-4E56-873D-40D56C11EAD2}.Release|Win32.ActiveCfg = Release|Win32
+		{E5E6DDA8-22A7-4E56-873D-40D56C11EAD2}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
