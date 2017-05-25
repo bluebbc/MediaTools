@@ -53,11 +53,23 @@ typedef struct pts_info_s{
 	int64_t pts;
 }pts_info_s;
 
+void Usage()
+{
+	printf("\tpts : bPrtV bPrtA filename\n\n");
+}
+
 int main(int argc, char* argv[])
 {
 	Config cfg;
 
-	cfg._inputFile = argv[1];
+	Usage();
+	if (argc != 4)
+		return 0;
+
+	int bPrintVideo = 1, bPrintAudio = 1;
+	bPrintVideo = atoi(argv[1]);
+	bPrintAudio = atoi(argv[2]);
+	cfg._inputFile = argv[3];
 
 	AVFormatContext	*pFormatCtx;
 	int				i, videoindex, audioindex;
@@ -107,15 +119,23 @@ int main(int argc, char* argv[])
 	//输出一下信息-----------------------------
 	av_dump_format(pFormatCtx,0,cfg._inputFile.c_str(),0);
 
+	int nVFrameCount = 0, nAudioFrameCount = 0;
 	while(av_read_frame(pFormatCtx, packet)>=0)
 	{
 		if(packet->stream_index==0)
 		{
-			printf("video -- %12I64d %12I64d \n", 
-				packet->pts, packet->dts);
+			if (bPrintVideo != 0){
+				printf("video	%d	--	%12I64d	%12I64d	(size:%d)\n", 
+					nVFrameCount, packet->pts, packet->dts, packet->size);
+			}
+			nVFrameCount++;
 		}else{
-			printf("audio -- %12I64d %12I64d \n",
-				packet->pts, packet->dts);
+			if (bPrintAudio != 0)
+			{
+				printf("audio	%d	--	%12I64d	%12I64d	(size:%d)\n",
+					nAudioFrameCount, packet->pts, packet->dts, packet->size);
+			}
+			nAudioFrameCount++;
 		}
 		av_free_packet(packet);
 	}

@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "demux_h264_aac_use_ffmpeg",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "demux_h264_aac_from_flv", "demux_h264_aac_from_flv\demux_h264_aac_from_flv.vcxproj", "{E5E6DDA8-22A7-4E56-873D-40D56C11EAD2}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "naluprint", "naluprint\naluprint.vcxproj", "{051CB2F3-A0A7-4BDD-9005-DAC3391CAA63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -33,6 +35,10 @@ Global
 		{E5E6DDA8-22A7-4E56-873D-40D56C11EAD2}.Debug|Win32.Build.0 = Debug|Win32
 		{E5E6DDA8-22A7-4E56-873D-40D56C11EAD2}.Release|Win32.ActiveCfg = Release|Win32
 		{E5E6DDA8-22A7-4E56-873D-40D56C11EAD2}.Release|Win32.Build.0 = Release|Win32
+		{051CB2F3-A0A7-4BDD-9005-DAC3391CAA63}.Debug|Win32.ActiveCfg = Debug|Win32
+		{051CB2F3-A0A7-4BDD-9005-DAC3391CAA63}.Debug|Win32.Build.0 = Debug|Win32
+		{051CB2F3-A0A7-4BDD-9005-DAC3391CAA63}.Release|Win32.ActiveCfg = Release|Win32
+		{051CB2F3-A0A7-4BDD-9005-DAC3391CAA63}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
